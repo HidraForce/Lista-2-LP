@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     // loop para inserir dados na variavel idade
     for (i = 0; i < 10; i++)
     {
-        printf("Insira um numero: \n-->");
+        printf("Insira sua idade: \n-->");
         scanf("%d", &idade[i]);
         // soma para verificar a soma dos valores inseridos
         sum += idade[i];
@@ -45,9 +45,9 @@ int main(int argc, char const *argv[])
         
     }
     //Saida
-    printf("A menor idade é: %d",menor);
-    printf("A média das idades é: %d",media);
-    printf("O numero de pessoas com idade entre 20 e 30 é: %d",qtd1);
+    printf("A menor idade é: %d\n",menor);
+    printf("A média das idades é: %d\n",media);
+    printf("O numero de pessoas com idade entre 20 e 30 é: %d\n",qtd1);
     printf("O numero de pessoas com idade acima da média é: %d",qtd2);
 
     return 0;
