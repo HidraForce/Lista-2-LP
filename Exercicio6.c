@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
             printf("Insra o nome da %dº pessoa:\n==>",i+1);
             fgets(nomes[i],12,stdin);
             nomes[i][strcspn(nomes[i],"\n")]=0;
-            printf("Insira o peso da %dº pessoa",i+1);
+            printf("Insira o peso da %dº pessoa\n",i+1);
             scanf("%f",&peso[i]);
             total+=peso[i];
 
