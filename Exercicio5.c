@@ -20,8 +20,9 @@ int main(int argc, char const *argv[])
     // Loop para entrada de dados
     for (i = 0; i < 5; i++)
     {
-        printf("Insira o tatal das vendas do vendedor: \n==>");
+        printf("Insira o total das vendas do vendedor: \n==>");
         scanf("%f", &Vendas[i]);
+        getchar(); // Consume the newline character in the input buffer
         total += Vendas[i]; // Total bruto das vendas
         printf("Insira o nome do vendedor\n==>");
         fgets(Nomes[i], 12, stdin);
@@ -42,12 +43,12 @@ int main(int argc, char const *argv[])
                             // vetores se relacionam logo i pode ser usado com ID
         }
     }
-    printf("Segue uma listagem dos Vendedores e suas Comissões");
+    printf("Segue uma listagem dos Vendedores e suas Comissões\n");
     for ( i = 0; i < 5; i++)
     {
-        printf("O vendedor %s obteve em comissões %.2f",Nomes[i],pagamento[i]);
+        printf("O vendedor %s obteve em comissões %.2f\n",Nomes[i],pagamento[i]);
     }
-    
 
     return 0;
 }
+
