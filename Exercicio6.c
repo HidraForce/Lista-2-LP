@@ -17,38 +17,32 @@ void menor(float x[], int size, float *menor_valor, int *menor_indice)
 int main(int argc, char const *argv[])
 {
     char nomes[10][12];
-    float peso[10],media,total;
+    float peso[10], media, total = 0;
     int i;
-
-    for ( i = 0; i < 10; i++)
-    {
-            printf("Insra o nome da %dº pessoa:\n==>",i+1);
-            fgets(nomes[i],12,stdin);
-            nomes[i][strcspn(nomes[i],"\n")]=0;
-            printf("Insira o peso da %dº pessoa\n",i+1);
-            scanf("%f",&peso[i]);
-            total+=peso[i];
-
-    }
-    media =total/10;
-    float menor_valor;
-    int menor_indice;
-    menor(peso, 10, &menor_valor, &menor_indice);
-    printf("A pessoa com menor peso é %s ele(a) possui %.2fKg",nomes[menor_indice],menor_valor);
-    printf("A média é %.2f",media);
 
     for (i = 0; i < 10; i++)
     {
-        if (peso[i]<media)
-        {
-         printf("O paciente %s possui %.2f Kg, está com um peso abaixo da media geral",nomes[i],peso[i]);   
-        }
-        
+        printf("Insira o nome da %dº pessoa:\n==>", i + 1);
+        fgets(nomes[i], 12, stdin);
+        nomes[i][strcspn(nomes[i], "\n")] = 0;
+        printf("Insira o peso da %dº pessoa\n==>", i + 1);
+        scanf("%f", &peso[i]);
+        getchar(); // consume the newline character left in the input buffer
+        total += peso[i];
     }
-    
-   
-    
+    media = total / 10;
+    float menor_valor;
+    int menor_indice;
+    menor(peso, 10, &menor_valor, &menor_indice);
+    printf("A pessoa com menor peso é %s ele(a) possui %.2fKg\n", nomes[menor_indice], menor_valor);
+    printf("A média é %.2f\n", media);
 
-    
+    for (i = 0; i < 10; i++)
+    {
+        if (peso[i] < media)
+        {
+            printf("O paciente %s possui %.2f Kg, está com um peso abaixo da media geral\n", nomes[i], peso[i]);
+        }
+    }
     return 0;
 }
