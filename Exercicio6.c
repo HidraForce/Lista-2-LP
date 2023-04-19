@@ -35,13 +35,13 @@ int main(int argc, char const *argv[])
     int menor_indice;
     menor(peso, 10, &menor_valor, &menor_indice);
     printf("A pessoa com menor peso é %s ele(a) possui %.2fKg",nomes[menor_indice],menor_valor);
-    printf("A média é %.2f");
+    printf("A média é %.2f",media);
 
     for (i = 0; i < 10; i++)
     {
         if (peso[i]<media)
         {
-         printf("O paciente %s possui %.2fKg, está com um peso abaixo da media geral",nomes[i],peso[i]);   
+         printf("O paciente %s possui %.2f Kg, está com um peso abaixo da media geral",nomes[i],peso[i]);   
         }
         
     }
